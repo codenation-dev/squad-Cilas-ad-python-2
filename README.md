@@ -1,7 +1,7 @@
 # django-televendas
 Projeto Final da Aceleração Python para Web realizado pela Codenation
-
-#TODO  
+[Descrição do Projeto](README_CODENATION.md)
+# TODO  
 - Cadastrar Vendedores
 - Cadastrar plano de comissões
 - Registrar vendas mensais
