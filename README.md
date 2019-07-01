@@ -2,10 +2,10 @@
 Projeto Final da Aceleração Python para Web realizado pela Codenation  
 [Descrição do Projeto](README_CODENATION.md)  
 
-# INSTALL  
+### INSTALL  
 - Clone o repositório.  
 `git clone https://github.com/cilas/django-televendas.git`  
-- Instale as depêndencias.  
+- Instale as dependências.  
 `pip install -r requeriments.txt`  
 - Construa o banco de dados.  
 `python manager.py migrate`  
@@ -14,7 +14,10 @@ Projeto Final da Aceleração Python para Web realizado pela Codenation
 - rode o servidor.  
 `python manage.py runserver`  
 
-# TODO  
+Recomendável isolar o ambiente de desenvolvimento.  
+`python -m venv venv`  
+
+### TODO  
 - Cadastrar Vendedores
 - Cadastrar plano de comissões
 - Registrar vendas mensais
