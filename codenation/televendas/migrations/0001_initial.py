@@ -32,7 +32,7 @@ class Migration(migrations.Migration):
                 ('idade', models.CharField(max_length=30)),
                 ('email', models.EmailField(max_length=254)),
                 ('cpf', models.CharField(max_length=30)),
-                ('plano_de_comissoes', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='comissions.PlanoComissoes')),
+                ('plano_de_comissoes', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='televendas.PlanoComissoes')),
             ],
         ),
         migrations.CreateModel(
@@ -41,7 +41,7 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('mes', month.models.MonthField(help_text='Informe o mês e o ano', verbose_name='Mês')),
                 ('valor_vendas', models.FloatField(max_length=20)),
-                ('vendedor', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='comissions.Vendedor')),
+                ('vendedor', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='televendas.Vendedor')),
             ],
         ),
     ]
