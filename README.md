@@ -9,8 +9,6 @@ Projeto Final da Aceleração Python para Web realizado pela Codenation
 `pip install -r requeriments.txt`  
 - Construa o banco de dados.  
 `python manager.py migrate`  
-- Crie um super usuário.  
-`python manage.py createsuperuser`  
 - rode o servidor.  
 `python manage.py runserver`  
 
