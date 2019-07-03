@@ -4,7 +4,7 @@ Projeto Final da Aceleração Python para Web realizado pela Codenation
 
 ### INSTALL  
 - Clone o repositório.  
-`git clone https://github.com/cilas/django-televendas.git`  
+`git clone  https://gitlab.com/cilas/django-televendas`  
 - Instale as dependências.  
 `pip install -r requeriments.txt`  
 - Construa o banco de dados.  
