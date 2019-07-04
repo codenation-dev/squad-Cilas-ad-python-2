@@ -42,7 +42,7 @@ class Venda(models.Model):
         ('9', 'Setembro'),
         ('10', 'Outubro'),
         ('11', 'Novembro'),
-        ('12', 'Desembro'),
+        ('12', 'Dezembro'),
     )
     vendedor = models.ForeignKey(Vendedor, on_delete=models.CASCADE)
     mes = models.CharField(choices=MESES, max_length=2)
@@ -51,4 +51,4 @@ class Venda(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     def __str__(self):
-       return 'Vendas de {} de {}'.format(self.mes, self.ano)
+       return 'Vendas {}/{}'.format(self.mes, self.ano)
