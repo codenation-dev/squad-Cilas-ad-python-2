@@ -11,12 +11,12 @@ class PlanoComissoesSerializer(serializers.HyperlinkedModelSerializer):
 class VendedorSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Vendedor
-        fields = ('id', 'nome', 'cep', 'logradouro', 'numero_casa', 'bairro', 'cidade', 'estado', 'telefone', 'idade', 'email', 'cpf', 'plano_de_comissoes', 'created_at', 'updated_at')
+        fields = ('id', 'nome', 'cep', 'logradouro', 'numero_casa', 'bairro', 'cidade', 'estado', 'telefone', 'data_nascimento', 'email', 'cpf', 'plano_de_comissoes', 'created_at', 'updated_at')
         read_only_fields = ('id', 'created_at', 'updated_at')
  
 class VendaSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Venda
-        fields = ('id', 'url', 'vendedor', 'valor_vendas', 'mes', 'ano', 'created_at', 'updated_at')
-        read_only_fields = ('id', 'created_at', 'updated_at')
+        fields = ('id', 'url', 'vendedor', 'valor_vendas', 'valor_comissao', 'mes', 'ano', 'created_at', 'updated_at')
+        read_only_fields = ('id', 'valor_comissao', 'created_at', 'updated_at')
  
