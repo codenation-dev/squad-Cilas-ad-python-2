@@ -3,7 +3,7 @@ from django.db import models
 class PlanoComissoes(models.Model):
     descricao = models.CharField("Descrição", max_length=200)
     porcentagem_menor = models.IntegerField()
-    valor_minimo = models.FloatField(max_length=20)
+    valor_minimo = models.DecimalField(max_digits=8, decimal_places=2)
     porcentagem_maior = models.IntegerField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
@@ -48,14 +48,9 @@ class Venda(models.Model):
     vendedor = models.ForeignKey(Vendedor, on_delete=models.CASCADE)
     mes = models.CharField("Mês", choices=MESES, max_length=2)
     ano = models.CharField("Ano", max_length=4)
-    valor_vendas = models.FloatField("Valor das Vendas", max_length=20)
+    valor_vendas = models.DecimalField("Valor das Vendas", max_digits=8, decimal_places=2)
+    valor_comissao = models.DecimalField("Valor da Comissão", max_digits=8, decimal_places=2, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     def __str__(self):
        return 'Vendas {}/{}'.format(self.mes, self.ano)
-
- class Historico(models.Model):
-     vendedor = models.ForeignKey(Vendedor, on_delete=models.CASCADE)
-     periodo = models.ForeignKey(Venda, on_delete=models.CASCADE)
-     plano = models.ForeignKey(PlanoComissoes, on_delete=models.CASCADE)
-     conseguiu = models.BooleanField()
