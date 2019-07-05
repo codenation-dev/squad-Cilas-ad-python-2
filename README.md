@@ -4,8 +4,8 @@ Projeto Final da Aceleração Python para Web realizado pela Codenation
 
 ### INSTALL  
 - Clone o repositório.  
-`git clone https://gitlab.com/cilas/django-televendas`  
-`cd django-televendas`  
+`git clone https://github.com/codenation-dev/squad-4-ad-python-2.git`  
+`cd squad-4-ad-python-2`  
 - Instale as dependências.  
 `pip install -r requeriments.txt`  
 - Construa o banco de dados.  
@@ -16,13 +16,6 @@ Projeto Final da Aceleração Python para Web realizado pela Codenation
 - rode o servidor.  
 `python manage.py runserver`  
 
-Recomendável isolar o ambiente de desenvolvimento.  
+Recomendável criar um ambiente virtual de desenvolvimento.  
 `python -m venv venv`  
 
-### TODO  
-- Cadastrar Vendedores
-- Cadastrar plano de comissões
-- Registrar vendas mensais
-- Calcular comissão dos vendedores
-- Recuperar lista de vendedores ordenados pelo valor da comissão
-- Enviar notificação aos vendedores que estão com a média de comissão baixa nos últimos meses
